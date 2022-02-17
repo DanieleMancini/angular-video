@@ -62,7 +62,7 @@ angular.module('anguvideo', [])
 
                             embedFriendlyUrl = newVal.slice(index + 4, newVal.length);
                             embedFriendlyUrl = "https://www.youtube.com/embed/" + embedFriendlyUrl + youtubeParams;
-                        } else if (newVal.indexOf("youtube.com") >= 0) { // displaying a youtube video
+                        } else if (newVal.indexOf("youtube.com") >= 0 || newVal.indexOf("youtube-nocookie.com") >= 0) { // displaying a youtube video
                             if (newVal.indexOf("embed") >= 0) {
                                 embedFriendlyUrl = newVal + youtubeParams;
                             } else {
