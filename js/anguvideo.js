@@ -66,7 +66,7 @@ angular.module('anguvideo', [])
                             if (newVal.indexOf("embed") >= 0) {
                                 embedFriendlyUrl = newVal + youtubeParams;
                             } else {
-                                newVal = newVal.replace(/&ab_channel(\\=[^&]*)?(?=&|$)|^ab_channel(\\=[^&]*)?(&|$)/, "")
+                                newVal = newVal.replace(/&ab_channel(=[^&]*)?|^ab_channel(=[^&]*)?&?/, "")
                                 embedFriendlyUrl = newVal.replace("/watch?v=", "/embed/") + youtubeParams;
                                 if (embedFriendlyUrl.indexOf('m.youtube.com') != -1) {
                                     embedFriendlyUrl = embedFriendlyUrl.replace("m.youtube.com", "youtube.com");
